@@ -1,2 +1,2 @@
 # sudoku-checker
-Personal sudoku checker project.
+This is a personal project done in Python.
