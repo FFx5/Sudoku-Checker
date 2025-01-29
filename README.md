@@ -1,2 +1,2 @@
 # Sudoku Checker
-This is a personal project done in Python.
+This is a personal project done in Python that uses multithreading. It allows a user to check the validity of a Sudoku solution. When SudokuChecker.py is executed, it will ask for the name of a file containing a Sudoku solution. If the name provided is not found, it will ask again for the name of a file. The Sudoku solution provided will be printed back to the user while it is being checked. If the Sudoku solution is valid, the program will state that it is a correct solution and terminate. Otherwise, if there is something invalid with the provided solution, the program will output a message stating the problem and terminate.
