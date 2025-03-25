@@ -67,16 +67,16 @@ def checkPuzzle(puzzleFile):
     with open(puzzleFile, 'r') as file:
         for line in file:
             if len(line.translate(translationTable)) != 9:
-                print("Invalid amount of data in a row was found. Each row must have 9 numbers.")
+                print("Invalid amount of data in a row was found. Each row must have 9 numbers. Error code: 1")
                 return
             for char in line.translate(translationTable):
                 if not char.isdigit() or int(char) not in range(1, 10):
-                    print(f"Invalid character in solution was found: '{char}'\nOnly numbers 1 - 9 are allowed.")
+                    print(f"Invalid character in solution was found: '{char}'\nOnly numbers 1 - 9 are allowed. Error code: 2")
                     return
             sudokuRows.append(line.translate(translationTable))
 
     if len(sudokuRows) != 9:
-        print("Invalid number of rows of data were found. There must be 9 rows.")
+        print("Invalid number of rows of data were found. There must be 9 rows. Error code: 3")
         return
     
     t1 = threading.Thread(checkRows(sudokuRows))
